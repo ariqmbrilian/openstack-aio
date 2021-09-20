@@ -5,7 +5,7 @@ sudo apt install -y python3-venv
 sudo mkdir ~/openstack
 sudo chmod 777 ~/openstack -R
 python3 -m venv ~/openstack/venv
-source ~/openstack/venv/bin/activate
+. ~/openstack/venv/bin/activate
 pip install -U pip
 pip install 'ansible<3.0'
 pip install kolla-ansible
@@ -14,7 +14,8 @@ sudo chown ariq:ariq /etc/kolla -R
 cp -r ~/openstack/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
 cp ~/openstack/venv/share/kolla-ansible/ansible/inventory/* .
 sudo mkdir /etc/ansible
-cat << EOF > etc/ansible/ansible.cfg
+sudo chown ariq:ariq /etc/ansible
+sudo cat << EOF > /etc/ansible/ansible.cfg
 [defaults]
 host_key_checking=False
 pipelining=True
