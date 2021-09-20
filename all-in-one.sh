@@ -3,6 +3,7 @@ sudo apt update
 sudo apt install -y python3-dev libffi-dev gcc libssl-dev
 sudo apt install -y python3-venv
 sudo mkdir ~/openstack
+chmod 777 ~/openstack
 python3 -m venv ~/openstack/venv
 source ~/openstack/venv/bin/activate
 pip install -U pip
