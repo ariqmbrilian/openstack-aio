@@ -3,7 +3,7 @@ sudo apt update
 sudo apt install -y python3-dev libffi-dev gcc libssl-dev
 sudo apt install -y python3-venv
 sudo mkdir ~/openstack
-chmod 777 ~/openstack
+sudo chmod 777 ~/openstack
 python3 -m venv ~/openstack/venv
 source ~/openstack/venv/bin/activate
 pip install -U pip
@@ -11,7 +11,6 @@ pip install 'ansible<3.0'
 pip install kolla-ansible
 sudo mkdir -p /etc/kolla
 sudo chown ariq:ariq /etc/kolla -R
-mkdir ~/openstack
 cp -r ~/openstack/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
 cp ~/openstack/venv/share/kolla-ansible/ansible/inventory/* .
 sudo mkdir /etc/ansible
