@@ -1,9 +1,11 @@
+source: https://docs.openstack.org/project-deploy-guide/kolla-ansible/wallaby/quickstart.html
+
 sudo ip link set dev ens36 up
 sudo apt update
 sudo apt install -y python3-dev libffi-dev gcc libssl-dev
 sudo apt install -y python3-venv
 python3 -m venv openstack/venv
-source openstack/venv/bin/activate
+source ~/openstack/venv/bin/activate
 pip install -U pip
 pip install 'ansible<3.0'
 pip install kolla-ansible
