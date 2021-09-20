@@ -1,5 +1,3 @@
-source: https://docs.openstack.org/project-deploy-guide/kolla-ansible/wallaby/quickstart.html
-
 sudo ip link set dev ens36 up
 sudo apt update
 sudo apt install -y python3-dev libffi-dev gcc libssl-dev
