@@ -2,6 +2,7 @@ sudo ip link set dev ens36 up
 sudo apt update
 sudo apt install -y python3-dev libffi-dev gcc libssl-dev
 sudo apt install -y python3-venv
+sudo mkdir ~/openstack
 python3 -m venv ~/openstack/venv
 source ~/openstack/venv/bin/activate
 pip install -U pip
