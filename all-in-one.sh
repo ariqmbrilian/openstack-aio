@@ -9,10 +9,11 @@ pip install 'ansible<3.0'
 pip install kolla-ansible
 sudo mkdir -p /etc/kolla
 sudo chown ariq:ariq /etc/kolla -R
-cp -r openstack/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
-cp openstack/venv/share/kolla-ansible/ansible/inventory/* .
+mkdir ~/openstack
+cp -r ~/openstack/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
+cp ~/openstack/venv/share/kolla-ansible/ansible/inventory/* .
 sudo mkdir /etc/ansible
-cat << EOF
+cat << EOF > etc/ansible/ansible.cfg
 [defaults]
 host_key_checking=False
 pipelining=True
