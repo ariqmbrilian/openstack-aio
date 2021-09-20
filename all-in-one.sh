@@ -34,4 +34,3 @@ kolla-ansible -i all-in-one deploy
 pip install python-openstackclient
 kolla-ansible post-deploy
 . /etc/kolla/admin-openrc.sh
-/usr/local/share/kolla-ansible/init-runonce
